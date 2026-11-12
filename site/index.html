@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Focus Timer - Pomodoro timer for work and study</title>
+<meta name="description" content="A desktop Pomodoro timer for work and study with tasks, streaks, analytics, ambient sounds and themes. Free and open source.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Focus Timer - Pomodoro timer for work and study">
+<meta property="og:description" content="A desktop Pomodoro timer for work and study with tasks, streaks, analytics, ambient sounds and themes. Free and open source.">
+<meta property="og:image" content="https://yousseifindx5.github.io/focus-timer/assets/icon.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){var t=null;try{t=localStorage.getItem('ft-theme')}catch(e){}
+if(!t)t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+document.documentElement.setAttribute('data-theme',t)})();
+</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="32" height="32">Focus Timer</a>
+    <nav class="links" id="links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#screenshots">Screenshots</a>
+      <a class="try" href="app/" target="_blank" rel="noopener">Try it online</a>
+      <a href="changelog.html">Changelog</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn hide-sm" href="https://github.com/yousseifindx5/focus-timer" target="_blank" rel="noopener" aria-label="Star on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7L18.5 22 12 18l-6.5 4 1.8-7.7L2 9.6 9 9z"/></svg><span>Star</span><span class="star-count" id="stars">-</span></a>
+    <button class="btn icon-btn" id="theme" type="button" aria-label="Toggle dark and light mode"><span class="sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><span class="moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span></button>
+    <a class="btn primary" data-dl href="https://github.com/yousseifindx5/focus-timer/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span>Download</span></a>
+    <button class="btn icon-btn menu-btn" id="menu" type="button" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-bottom:0">
+  <div class="container">
+    <span class="badge-pill">Free and open source</span>
+    <h1>Focus deeper. Track everything.</h1>
+    <p class="lead">A desktop Pomodoro timer for work and study, with tasks, streaks, analytics, ambient sounds and themes.</p>
+    <div class="cta">
+      <a class="btn primary lg" data-dl href="https://github.com/yousseifindx5/focus-timer/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span>Download for Windows</span></a>
+      <a class="btn lg" href="https://github.com/yousseifindx5/focus-timer" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+    <p class="note"><span data-version>Latest release</span> &middot; Windows 10 and 11 &middot; MIT License</p>
+    <div class="shot-frame">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <img class="only-light" src="assets/shots/light_timer.webp" alt="Focus Timer in light mode" width="1280" height="800">
+      <img class="only-dark" src="assets/shots/dark_timer.webp" alt="Focus Timer in dark mode" width="1280" height="800">
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <span class="eyebrow">Features</span>
+    <h2 class="title">Everything you need to stay focused</h2>
+    <p class="sub">One app for your timer, your tasks and your progress.</p>
+    <div class="grid">
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Flexible timer systems</h3><p>25/5, 45/15, 50/10, 90/20 and your own presets, saved automatically. Auto switch between focus and break, with start, pause, resume, reset and skip.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Tasks and projects</h3><p>Daily, weekly and monthly tasks and projects, split into work and study. Set difficulty, priority and deadlines, and reorder with drag and drop.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg></div><h3>Streaks, levels and badges</h3><p>Daily and weekly streaks with streak freeze, XP and levels that grow with every pomodoro, and 33 badges to unlock.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Summaries and analytics</h3><p>Daily, weekly, monthly and custom range summaries, an activity heatmap, and estimated vs actual time for every task.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="7" rx="1"/><rect x="17" y="14" width="4" height="7" rx="1"/></svg></div><h3>Ambient sounds</h3><p>Rain, ocean, wind, fireplace, birds, noise colors and a calm pad. Mix them, and switch sound effects on or off separately.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="16" cy="10" r="1"/></svg></div><h3>Themes and customization</h3><p>13 built-in themes, your own theme builder, fonts, timer size, sidebar position and a custom background image.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10c1 1 1 2 1 3h6c0-1 0-2 1-3a6 6 0 0 0-4-10z"/></svg></div><h3>Smart helpers</h3><p>Your best focus time from your history, break suggestions, water reminders and motivational quotes or your own goal reminders.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="10" height="10" rx="2"/><rect x="11" y="11" width="10" height="10" rx="2"/></svg></div><h3>Compact window</h3><p>Shrink to a tiny timer that can stay on top of other programs while you work.</p></div>
+    <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Arabic and English</h3><p>A full interface in both languages, including right-to-left layout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="screenshots" class="alt">
+  <div class="container">
+    <span class="eyebrow">Screenshots</span>
+    <h2 class="title">See it in action</h2>
+    <p class="sub">Want to try it first? Use <a href="app/" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Try it online</a> in the top bar.</p>
+    <div class="tabs" role="tablist"><button class="tab on" type="button" data-tab="timer">Timer</button><button class="tab" type="button" data-tab="tasks">Tasks</button><button class="tab" type="button" data-tab="summaries">Summaries</button><button class="tab" type="button" data-tab="streak">Streak and badges</button><button class="tab" type="button" data-tab="themes">Themes</button></div>
+    <div class="pane on" id="pane-timer">
+      <div class="shot-frame"><img class="only-light" src="assets/shots/light_timer.webp" alt="Timer screen in light mode" width="1280" height="800" loading="lazy"><img class="only-dark" src="assets/shots/dark_timer.webp" alt="Timer screen in dark mode" width="1280" height="800" loading="lazy"></div>
+    </div>
+    <div class="pane" id="pane-tasks">
+      <div class="shot-frame"><img class="only-light" src="assets/shots/light_tasks.webp" alt="Tasks screen in light mode" width="1280" height="800" loading="lazy"><img class="only-dark" src="assets/shots/dark_tasks.webp" alt="Tasks screen in dark mode" width="1280" height="800" loading="lazy"></div>
+    </div>
+    <div class="pane" id="pane-summaries">
+      <div class="shot-frame"><img class="only-light" src="assets/shots/light_summaries.webp" alt="Summaries screen in light mode" width="1280" height="800" loading="lazy"><img class="only-dark" src="assets/shots/dark_summaries.webp" alt="Summaries screen in dark mode" width="1280" height="800" loading="lazy"></div>
+    </div>
+    <div class="pane" id="pane-streak">
+      <div class="shot-frame"><img class="only-light" src="assets/shots/light_streak.webp" alt="Streak and badges screen in light mode" width="1280" height="800" loading="lazy"><img class="only-dark" src="assets/shots/dark_streak.webp" alt="Streak and badges screen in dark mode" width="1280" height="800" loading="lazy"></div>
+    </div>
+    <div class="pane" id="pane-themes">
+      <div class="shot-frame"><img class="only-light" src="assets/shots/light_themes.webp" alt="Themes screen in light mode" width="1280" height="800" loading="lazy"><img class="only-dark" src="assets/shots/dark_themes.webp" alt="Themes screen in dark mode" width="1280" height="800" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="container dl-box">
+    <div>
+      <span class="eyebrow">Download</span>
+      <h2 class="title">Get Focus Timer for Windows</h2>
+      <p class="sub" style="margin-bottom:24px">Install it in a minute. It is free, open source, and your data stays on your computer.</p>
+      <a class="btn primary lg" data-dl href="https://github.com/yousseifindx5/focus-timer/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span>Download installer</span></a>
+      <p class="note"><span data-version>Latest release</span><span data-size></span> &middot; <a data-portable href="https://github.com/yousseifindx5/focus-timer/releases/latest" style="text-decoration:underline">Portable version</a> &middot; <a href="https://github.com/yousseifindx5/focus-timer/releases" target="_blank" rel="noopener" style="text-decoration:underline">All releases</a></p>
+    </div>
+    <div class="card">
+      <h3>If Windows shows "Windows protected your PC"</h3>
+      <p style="margin-bottom:12px">The app is not code-signed yet, so Windows SmartScreen warns about new apps.</p>
+      <ol class="steps">
+        <li>Click <b>More info</b></li>
+        <li>Click <b>Run anyway</b></li>
+      </ol>
+      <p style="margin-top:12px">The full source code is public, so you can check it or build it yourself.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container">
+    <span>&copy; 2026 yousseifindx5</span>
+    <a href="https://github.com/yousseifindx5/focus-timer/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+    <a href="https://github.com/yousseifindx5/focus-timer" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/yousseifindx5/focus-timer/releases" target="_blank" rel="noopener">Releases</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="app/" target="_blank" rel="noopener">Try it online</a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

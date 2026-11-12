@@ -19,7 +19,7 @@ export const QUOTES: [string, string][] = [
 ]
 
 export const DEFAULT_SETTINGS: Settings = {
-  lang: 'ar',
+  lang: typeof navigator !== 'undefined' && navigator.language?.toLowerCase().startsWith('ar') ? 'ar' : 'en',
   theme: 'dark',
   customThemes: [],
   weekStart: 6,
